@@ -1,8 +1,9 @@
+// Base class
 public class HealthProfessional {
     // Instance variables
-    private int ID;
-    private String name;
-    private String department; // Additional variable to describe the health professional
+    protected int ID;
+    protected String name;
+    protected String department;
 
     // Default constructor
     public HealthProfessional() {
@@ -16,10 +17,6 @@ public class HealthProfessional {
         this.department = department;
     }
 
-    public HealthProfessional(int ID) {
-        this.ID = ID;
-    }
-
     // Method to print all instance variables
     public void printInfo() {
         System.out.println("ID: " + ID);
@@ -27,4 +24,54 @@ public class HealthProfessional {
         System.out.println("Department: " + department);
     }
 }
+
+// Child class for General Practitioner
+class GeneralPractitioner extends HealthProfessional {
+    private int numberOfPatients;
+
+    // Default constructor
+    public GeneralPractitioner() {
+        super();
+        
+    }
+
+    // Parameterized constructor
+    public GeneralPractitioner(int ID, String name, String department, int numberOfPatients) {
+        super(ID, name, department); // Initialize base class variables
+        this.numberOfPatients = numberOfPatients;
+    }
+
+    // Method to print information
+    public void printInfo() {
+        System.out.println("The health professional details are (General Practitioner):");
+        super.printInfo(); // Print base class details
+        System.out.println("Number of Patients: " + numberOfPatients);
+    }
+}
+
+// Child class for Specialist
+class Specialist extends HealthProfessional {
+    private String specialization;
+
+    // Default constructor
+    public Specialist() {
+        super();
+        
+    }
+
+    // Parameterized constructor
+    public Specialist(int ID, String name, String department, String specialization) {
+        super(ID, name, department); // Initialize base class variables
+        this.specialization = specialization;
+    }
+
+    // Method to print information
+    public void printInfo() {
+        System.out.println("The health professional details are (Specialist):");
+        super.printInfo(); // Print base class details
+        System.out.println("Specialization: " + specialization);
+    }
+}
+
+
 
