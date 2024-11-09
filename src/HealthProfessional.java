@@ -42,6 +42,7 @@ class GeneralPractitioner extends HealthProfessional {
     }
 
     // Method to print information
+    @Override
     public void printInfo() {
         System.out.println("The health professional details are (General Practitioner):");
         super.printInfo(); // Print base class details
@@ -66,12 +67,12 @@ class Specialist extends HealthProfessional {
     }
 
     // Method to print information
+    @Override
     public void printInfo() {
         System.out.println("The health professional details are (Specialist):");
         super.printInfo(); // Print base class details
         System.out.println("Specialization: " + specialization);
     }
 }
-
 
 
