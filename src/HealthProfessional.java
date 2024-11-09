@@ -1,4 +1,5 @@
-// Base class
+// Base class 
+// Part 1 of the assignment
 public class HealthProfessional {
     // Instance variables
     protected int ID;
@@ -26,6 +27,7 @@ public class HealthProfessional {
 }
 
 // Child class for General Practitioner
+//Part 2 of the Assignment
 class GeneralPractitioner extends HealthProfessional {
     private int numberOfPatients;
 

@@ -1,3 +1,5 @@
+//Part 4 of the Assignmnet
+
 public class Appointment {
     // Instance variables
     private String patientName;
@@ -33,7 +35,30 @@ public class Appointment {
         }
     }
 
-    // Getter and Setter methods can be added if needed
+    // Getter for patientName
+    public String getPatientName() {
+        return patientName;
+    }
+
+    // Getter for mobilePhone
+    public String getMobilePhone() {
+        return mobilePhone;
+    }
+
+    // Getter for preferredTimeSlot
+    public String getPreferredTimeSlot() {
+        return preferredTimeSlot;
+    }
+
+    // Getter for doctor
+    public HealthProfessional getDoctor() {
+        return doctor;
+    }
+
+    
 }
+
+    
+
 
 
